@@ -32,10 +32,6 @@ img {
     border-radius: 10px;
 }
 
-.conteudo {
-    margin-top: 0;
-    margin-bottom: 0;
-}
 
 h2 {
     padding-left: 10px;
@@ -83,4 +79,12 @@ span {
 .center {
     display: flex;
     justify-content: center;
+}
+
+.precocortado {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: grey;
+    text-decoration: line-through;
+    font-size: 80%;
 }
