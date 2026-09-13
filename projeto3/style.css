@@ -87,4 +87,8 @@ img {
         height: 50vh;
     }
 
+    h1 {
+        font-size: 200%;
+    }
+
 }
