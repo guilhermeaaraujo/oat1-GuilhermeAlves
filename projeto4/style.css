@@ -1,0 +1,90 @@
+body {
+    background-image: linear-gradient(to right, rgb(4, 4, 63), black);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    align-items: center;
+    margin: auto;
+    padding: 10%;
+}
+
+section {
+    max-width: 320px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:hover {
+    box-shadow: 0px 10px 30px grey;
+}
+
+section:hover h1 {
+    text-decoration: underline;
+}
+
+.destaque {
+    transform: scale(1.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h2 {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    background-color: red;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: white;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+ul li.sim {
+    list-style-type: "✓   ";
+    color: green;
+}
+
+ul li.nao {
+    color: red;
+    text-decoration: dashed;
+    list-style-type: "✗   ";
+}
+
+.preco {
+    color: red;
+    transform: scale(1.5);
+}
+
+b {
+    color: red;
+}
+
+button {
+    padding: 5px;
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px black;
+}
