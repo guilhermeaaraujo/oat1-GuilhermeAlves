@@ -1,0 +1,107 @@
+body {
+    background-image: linear-gradient(45deg, yellow, orange, red);
+    margin: 0;
+    min-height: 100vh;
+    height: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 30%;
+}
+
+h1 {
+    font-size: 300%;
+    color: white;
+}
+
+main {
+    min-height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    min-height: 400px;
+    margin-bottom: 20px;
+    min-height: 100%;
+    height: auto;
+    width:  80%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+@media(max-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+.usuario {
+    display: flex;
+    grid-template-columns: 20% 30% 50%;
+    padding: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+img {
+    border: 3px solid black;
+    background: linear-gradient(45deg, yellow, orange);
+    overflow: hidden;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+span {
+    color: gold;
+    font-size: 25px;
+}
+
+.depoimento {
+    margin: 20px;
+    text-align: justify;
+}
+
+.depoimento::before {
+    content: "“";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 250px;
+    color: rgba(255, 165, 0, 0.45);
+
+    z-index: -1;
+}
+
+.vazia {
+    color: lightgray;
+}
+
+.meia {
+    background: linear-gradient(to right, gold 50%, lightgray 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
