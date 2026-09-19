@@ -1,0 +1,78 @@
+:root {
+    --background: lightblue;
+    --main: white;
+    --font: black;
+    --label: rgb(203, 203, 203);
+}
+
+:root:has(#modo:checked) {
+    --background: darkblue;
+    --main: black;
+    --font: white;
+    --label: rgb(99, 98, 98);
+}
+
+body {
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+main {
+    background-color: var(--main);
+    height: 60%;
+    max-width: 90%;
+    padding: 100px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+h1 {
+    color: var(--font);
+}
+
+
+label {
+    font-size: 300%;
+    background-color: var(--label);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+#modo {
+    display: none;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: 40px;
+    padding: 5px;
+    
+    background-color: var(--label); 
+    border-radius: 50px;    
+    cursor: pointer;
+    box-sizing: border-box; 
+}
+
+label::after {
+    content: "☀️";
+    font-size: 1.8rem;
+    margin-left: 0;
+    transition: background-color 0.3s ease;
+}
+
+:root:has(#modo:checked) label::after {
+    content: "🌙";
+    margin-left: auto; 
+}
+
+
