@@ -1,0 +1,75 @@
+body {
+    background-image: linear-gradient(135deg, darkblue, black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+
+    border-radius: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+.galeria {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.imagem {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p {
+    position: absolute;
+    color: black;
+
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+
+    opacity: 0;
+}
+
+img:hover {
+    filter: brightness(80%);
+
+    transform: scale(1.1);
+}
+
+.imagem:hover p {
+    animation: surgirTexto 0.8s ease-out;
+    opacity: 1;
+}
+
+@keyframes surgirTexto {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
