@@ -1,0 +1,54 @@
+body {
+    background-image: linear-gradient(135deg, darkblue, black);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    padding: 50px;
+    width: 80%;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+}
+
+.icone {
+    font-size: 300%;
+}
+
+h1 {
+    font-size: 400%;
+}
+
+.contador {
+
+    animation: surgirNumero 2s ease-out;
+}
+
+@keyframes surgirNumero {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
