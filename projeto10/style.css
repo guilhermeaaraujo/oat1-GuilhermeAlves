@@ -1,0 +1,227 @@
+:root {
+    --1cor-50: hsl(215, 100%, 97%);
+    --1cor-100: hsl(215, 100%, 93%);
+    --1cor-300: hsl(215, 100%, 68%);
+    --1cor-600: hsl(215, 100%, 55%);
+    --1cor-900: hsl(215, 100%, 23%);
+
+    --grande: 2rem;
+    --medio: 1.5rem;
+    --pequeno: 1rem;
+    --legenda: 0.875rem;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--1cor-900);
+}
+
+main {
+    min-height: 90vh;
+    width: 90%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid var(--1cor-600);
+    box-sizing: border-box;
+    background-color: var(--1cor-100);
+}
+
+.paleta {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid var(--1cor-600);
+    margin-bottom: 20px;
+}
+
+.cores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#cor50 {
+    background-color: var(--1cor-50);
+}
+
+#cor100 {
+    background-color: var(--1cor-100);
+}
+
+#cor300 {
+    background-color: var(--1cor-300);
+}
+
+#cor600 {
+    background-color: var(--1cor-600);
+}
+
+#cor900 {
+    background-color: var(--1cor-900);
+}
+
+.quadrado {
+    position: relative;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    border-radius: 360px;
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+@media(max-width:768px) {
+
+    .quadrado {
+        height: 100px;
+        width: 100px;
+    }
+
+    .escalaEBotoes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .botoes {
+    }
+}
+
+#grande p {
+    font-size: var(--grande);
+}
+
+#medio p {
+    font-size: var(--medio);
+}
+
+#pequeno p {
+    font-size: var(--pequeno);
+}
+
+#legenda p {
+    font-size: var(--legenda);
+}
+
+.texto {
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: var(--1cor-900);
+    border-radius: 20px;
+    color: white;
+}
+
+.escala {
+    display: inline-block;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid var(--1cor-600);
+    max-height: 550px;
+}
+
+.botoes {
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid var(--1cor-600);
+}
+
+.escalaEBotoes {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 0.5fr 1.5fr;
+}
+
+.meusbotoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.osbotoes {
+    padding: 10px;
+}
+
+#primary .normal {
+    background-color: var(--1cor-600);
+    border: 5px solid var(--1cor-300);
+    color: white;
+}
+
+#primary .hover {
+    background-color: var(--1cor-900);
+    border: 5px solid var(--1cor-600);
+    color: white;
+}
+
+#primary .focus {
+    background-color: var(--1cor-900);
+    color: white;
+    border: 5px solid white;
+}
+
+#secondary .normal {
+    background-color: var(--1cor-300);
+    border: 5px solid var(--1cor-100);
+    color: white;
+}
+
+#secondary .hover {
+    background-color: var(--1cor-600);
+    border: 5px solid var(--1cor-300);
+    color: white;
+}
+
+#secondary .focus {
+    background-color: var(--1cor-600);
+    color: white;
+    border: 5px solid white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#ghost .normal {
+    background-color: transparent;
+    border: 5px solid white;
+}
+
+#ghost .hover {
+    background-color: transparent;
+    border: 5px solid var(--1cor-900);
+}
+
+#ghost .focus {
+    background-color: transparent;
+    border: 5px solid var(--1cor-600);
+}
+
+button:active {
+    transform: scale(1.1);
+}
